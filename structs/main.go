@@ -24,7 +24,14 @@ func main() {
 			mobileNumber: "0730333332",
 		},
 	}
+
+	// charlesPointer := &charles
+	charles.updateName("Chuck")
 	charles.print()
+}
+
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 
 func (p person) print() {
